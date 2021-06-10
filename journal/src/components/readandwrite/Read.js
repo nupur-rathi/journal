@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Read = () =>
+const Read = ({readProp}) =>
 {
     return (
-        <div className="Read">
+        <div className="Read">{readProp}
         </div>
     );
 }

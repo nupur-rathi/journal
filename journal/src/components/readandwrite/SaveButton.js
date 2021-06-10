@@ -1,10 +1,9 @@
 import React from 'react';
 
-const SaveButton = () =>
+const SaveButton = ({writeProp, editEntry}) =>
 {
     return (
-        <div className="ReadAndWrite">
-        </div>
+        <button className="SaveButton" onClick={()=>{editEntry(writeProp)}}>Save</button>
     );
 }
 

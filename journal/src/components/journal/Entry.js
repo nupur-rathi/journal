@@ -1,10 +1,9 @@
-import React, {useEffect} from 'react';
-import add from "./add";
+import React from 'react';
 
-function Entry({date})
+function Entry({date, entry, id, setReadText, setWriteText})
 {
     return (
-        <div className="Entry" onClick={add}>{date}</div>
+        <div className="Entry" onClick={()=>{setReadText(date, entry, id); setWriteText(entry)}}>{date}</div>
     );
 }
 

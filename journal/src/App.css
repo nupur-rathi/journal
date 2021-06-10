@@ -21,11 +21,6 @@
   align-items: center;
 }
 
-.ReadAndWrite{
-  width: 30%;
-  background-color: #EEEEEE;
-}
-
 .JournalBody{
   height: 84%;
   padding: 20px 80px 20px 80px;
@@ -58,7 +53,7 @@
 .AddButton{
   outline: none;
   border: 1px solid black;
-  background-color: #ee3d1d;
+  background-color: springgreen;
   height: 6%;
   font-size: 2rem;
   border-radius: 5px;
@@ -67,4 +62,38 @@
 
 .AddButton:active{
   background-color: green;
+}
+
+.ReadAndWrite{
+  width: 30%;
+  background-color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Read{
+  height: 40%;
+  background-color: #FEFEFE;
+  border: 1px solid black;
+  width: 90%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.Write{
+  height: 40%;
+  width: 90%;
+  background-color: #FEFEFE;
+  border: 1px solid black;
+  overflow: auto;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.SaveButton{
+  height: 5%;
+  width: 90%;
+  background-color: red;
 }

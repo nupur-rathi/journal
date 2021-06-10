@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const Write = () =>
+const Write = ({writeProp, setWriteText}) =>
 {
     return (
-        <div className="Write">
-        </div>
+        <textarea className="Write" value={writeProp} onChange={(e)=>{setWriteText(e.target.value)}}>
+        </textarea>
     );
 }
 
