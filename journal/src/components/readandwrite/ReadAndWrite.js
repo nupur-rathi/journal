@@ -7,7 +7,7 @@ const ReadAndWrite = ({readProp, writeProp, setWriteText, editEntry}) =>
 {
     return (
         <div className="ReadAndWrite">
-            <label>Read</label>
+            <label>Hello</label>
             <Read readProp={readProp}/>
             <label>Write</label>
             <Write writeProp={writeProp} setWriteText={setWriteText}/>
