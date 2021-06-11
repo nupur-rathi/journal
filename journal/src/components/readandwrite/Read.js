@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { JournalContext } from '../../context';
 
-const Read = ({readProp}) =>
+const Read = () =>
 {
+    const {read} = useContext(JournalContext);
+
     return (
-        <div className="Read">{readProp}
+        <div className="Read">{read}
         </div>
     );
 }

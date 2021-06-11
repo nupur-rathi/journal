@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { JournalContext } from '../../context';
 
-const SaveButton = ({writeProp, editEntry}) =>
+const SaveButton = () =>
 {
+    const {write, editEntry} = useContext(JournalContext);
+
     return (
-        <button className="SaveButton" onClick={()=>{editEntry(writeProp)}}>Save</button>
+        <button className="SaveButton" onClick={()=>{editEntry(write)}}>Save</button>
     );
 }
 

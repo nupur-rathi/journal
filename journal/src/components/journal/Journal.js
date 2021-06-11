@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
-import AddButton from "./AddButton";
+import React, {useContext} from 'react';
+import { JournalContext } from '../../context';
 import JournalBody from "./JournalBody";
 
-const Journal = ({listOfEntries, setListOfEntries, addEntry, setReadText, setWriteText}) => {
+const Journal = () => {
     
+    const {addEntry} = useContext(JournalContext);
+
     return (
         <div className="Journal">
             <h1 className="Journalhead">JOURNAL</h1>
-            <JournalBody setReadText={setReadText} setWriteText={setWriteText} listOfEntries={listOfEntries}/>
-            <AddButton addEntry={addEntry}/>
+            <JournalBody />
+            <button className="AddButton" onClick={addEntry}>Add Entry</button>
         </div>
     )
 }

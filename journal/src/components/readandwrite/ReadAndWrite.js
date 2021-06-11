@@ -3,15 +3,16 @@ import Read from './Read';
 import SaveButton from './SaveButton';
 import Write from './Write';
 
-const ReadAndWrite = ({readProp, writeProp, setWriteText, editEntry}) =>
+const ReadAndWrite = () =>
 {
+
     return (
         <div className="ReadAndWrite">
             <label>Hello</label>
-            <Read readProp={readProp}/>
+            <Read />
             <label>Write</label>
-            <Write writeProp={writeProp} setWriteText={setWriteText}/>
-            <SaveButton writeProp={writeProp} editEntry={editEntry}/>
+            <Write />
+            <SaveButton />
         </div>
     );
 }

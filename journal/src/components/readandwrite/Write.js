@@ -1,9 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useContext} from 'react';
+import { JournalContext } from '../../context';
 
-const Write = ({writeProp, setWriteText}) =>
+const Write = () =>
 {
+
+    const {write, writeFunc} = useContext(JournalContext);
+
     return (
-        <textarea className="Write" value={writeProp} onChange={(e)=>{setWriteText(e.target.value)}}>
+        <textarea className="Write" value={write} onChange={(e)=>{writeFunc(e.target.value)}}>
         </textarea>
     );
 }
