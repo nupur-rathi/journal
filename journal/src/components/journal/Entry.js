@@ -1,12 +1,13 @@
-import React, {useContext} from 'react';
-import { JournalContext } from '../../context';
+import React from 'react';
+import {useDispatch } from 'react-redux';
+import {read, write} from "../../actions";
 
 function Entry({date, entry, id})
 {
-    const {readFunc, writeFunc} = useContext(JournalContext);
+    const dispatch = useDispatch();
 
     return (
-        <div className="Entry" onClick={()=>{readFunc(date, entry, id); writeFunc(entry)}}>{date}</div>
+        <div className="Entry" onClick={()=>{dispatch(read(date, entry, id)); dispatch(write(entry));}}>{date}</div>
     );
 }
 

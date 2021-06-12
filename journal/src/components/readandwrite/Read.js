@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
-import { JournalContext } from '../../context';
+import React from 'react';
+import { useSelector} from 'react-redux';
 
 const Read = () =>
 {
-    const {read} = useContext(JournalContext);
+    const read = useSelector(state => state.read);
 
     return (
         <div className="Read">{read}

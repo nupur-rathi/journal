@@ -1,14 +1,14 @@
-import React, {useContext} from 'react';
-import { JournalContext } from '../../context';
+import React from 'react';
+import { useSelector} from 'react-redux';
 import Entry from './Entry';
 
 function JournalBody()
 {
-    const {listOfEntries} = useContext(JournalContext);
+    const listOfEntries = useSelector(state => state.listOfEntries);
     
     return (
         <div className="JournalBody">
-            {listOfEntries.map((item)=><Entry date={item.date} entry={item.text} id={item.id}/>)}
+            {listOfEntries.map((item)=><Entry key={item.id} date={item.date} entry={item.text} id={item.id}/>)}
         </div>
     );
 }

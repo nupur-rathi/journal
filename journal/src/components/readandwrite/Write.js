@@ -1,13 +1,15 @@
-import React, {useContext} from 'react';
-import { JournalContext } from '../../context';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {write} from "../../actions";
 
 const Write = () =>
 {
 
-    const {write, writeFunc} = useContext(JournalContext);
+    const writetext = useSelector(state => state.write);
+    const dispatch = useDispatch();
 
     return (
-        <textarea className="Write" value={write} onChange={(e)=>{writeFunc(e.target.value)}}>
+        <textarea className="Write" value={writetext} onChange={(e)=>{dispatch(write(e.target.value))}}>
         </textarea>
     );
 }
